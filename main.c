@@ -7,7 +7,7 @@ void ft_genY(int y);
 
 int	main(void)
 {
-	rush(5, 5);
+	rush(128, 128);
 	return (0);
 }
 
@@ -18,9 +18,27 @@ void ft_putchar(char ch)
 
 void rush(int x, int y)
 {
+	int counter = 0;
 	ft_genX(x);
-}
+	
+	if(y == 2)
+	{
+	ft_genX(x);
+	}
 
+	else
+	{
+	while(counter < y - 2)
+	{
+	ft_genY(x);
+	counter++;
+	}
+	}
+	
+	if(x > 1)
+	ft_genX(x);
+	
+}
 void ft_genX(int x)
 {
 	int h;
@@ -34,7 +52,29 @@ void ft_genX(int x)
 		ft_putchar(45);
 		c++;
 	}
-	ft_putchar(111);
+	
+	
+	if(x > 1)
+	{
+	    ft_putchar(111);
+	}
 	ft_putchar(10);
 }
 
+
+void ft_genY(int x)
+{
+	int h;
+	int c;
+	c = 0;
+	h = x -2;
+	ft_putchar(124);
+
+	while (c < h)
+	{
+		ft_putchar(32);
+		c++;
+	}
+	ft_putchar(124);
+	ft_putchar(10);
+}
