@@ -7,7 +7,7 @@ void ft_genY(int y);
 
 int	main(void)
 {
-	rush(128, 128);
+	rush(54, 10);
 	return (0);
 }
 
@@ -45,7 +45,10 @@ void ft_genX(int x)
 	int c;
 	c = 0;
 	h = x -2;
+	if (h >= 2)
+	{
 	ft_putchar(111);
+	}
 
 	while (c < h)
 	{
